@@ -1,0 +1,21 @@
+<div class="product-box">
+  <switch expression="!!Math.floor(Math.random() * 4)">
+    <case n="true">
+      <include src="components/LogoBadge.html" />
+    </case>
+    <case n="false">
+      <include src="components/PointsBadge.html" />
+    </case>
+  </switch>
+  <div>
+    <include src="components/ProductImage.html" />
+  </div>
+  <div class="product-box__content">
+    <div>
+      <include src="components/PriceBox.html" />
+    </div>
+    <div>
+      <include src="components/ProductDescription.html" />
+    </div>
+  </div>
+</div>

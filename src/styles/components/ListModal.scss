@@ -1,0 +1,130 @@
+
+#addToList {
+  background:  url('../assets/icons/list.png') no-repeat center;
+  background-size: contain;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-left: 8px;
+  padding-bottom: 6px;
+  color: $dark-orange;
+  margin-left: auto;
+  margin-right: 60px;
+  margin-top: 5px;
+  cursor: pointer;
+  @media screen and (min-width: $tablet) {
+    margin-right: 65px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 25px;
+  }
+}
+#list-modal {
+  background: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal {
+    background: #111;
+    padding: 10px;
+    width: 90%;
+    position: relative;
+    @media screen and (min-width: $tablet) {
+      width: auto;
+    }
+  }
+
+  .modal-close {
+    background: url('../assets/icons/x.svg') no-repeat center;
+    background-size: 13px 13px;
+    transform: rotate(45deg);
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    top: -10px;
+    right: -10px;
+    background-color: #FF8525;
+    border-radius: 50%;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h2 {
+    color: $dark-orange;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Sharp Grotesk';
+    margin-bottom: 10px;
+  }
+  .product-box {
+    height: auto;
+    flex-direction: row;
+  }
+  .product-box__content {
+    position: static;
+  }
+  .product-box__image-wpr {
+    max-width: 80px;
+    max-height: 80px;
+    align-items: flex-end;
+    margin-right: 8px;
+  }
+  .price-box__price {
+    font-size: 14px;
+    background: none;
+    color: #000;
+    display: inline;
+    .super, .super-super {
+      font-size: 14px;
+    }
+    .super:before {
+      content: '.'
+    }
+  }
+
+  .remove-list {
+    background: url('../assets/icons/x.svg') no-repeat center;
+    background-size: 10px 10px;
+    transform: rotate(45deg);
+    width: 15px;
+    height: 15px;;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .cta {
+    background: $red;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  input {
+    border: 0;
+    -webkit-appearance: none;
+    padding: 10px;
+  }
+
+  a {
+    background: $dark-orange;
+    color: #fff;
+    font: 700 20px/20px 'Sharp Grotesk';
+    padding: 9px 10px;
+    margin-left: 8px;
+  }
+}
+
+#list-container {
+  max-height: 412px;
+  overflow-y: scroll;
+}

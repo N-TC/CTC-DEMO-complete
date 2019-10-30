@@ -1,0 +1,126 @@
+.product-box--zevia {
+  background: #08C0DE;
+
+  .bg {
+    background: #0F242B;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 60%;
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 30px;
+      background: url('../assets/images/zevia/bg.png') no-repeat bottom;
+      position: absolute;
+      bottom: -30px;
+    }
+    opacity: 0;
+  }
+
+  .can {
+    position: absolute;
+    margin: auto;
+    width: 23%;
+    top: 17%;
+    opacity: 0;
+  }
+  .can3 {
+    left: 0;
+    right: 0;
+    width: 27%;
+    top: 13%;
+  }
+  .can2 {
+    left: 22%;
+    width: 25%;
+    top: 15%;
+  }
+  .can4 {
+    right: 22%;
+    width: 25%;
+    top: 15%;
+  }
+  .can1 {
+    left: 8%;
+  }
+  .can5 {
+    right: 8%;
+  }
+
+  .header {
+    position: absolute;
+    background: none;
+    height: 8%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 5%;
+    opacity: 0;
+    z-index: 0;
+  }
+
+  .cta {
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    width: calc(100% - 40px);
+    opacity: 0;
+  }
+
+  &.animating {
+    .bg {
+      animation: slidedown .5s 1.5s ease-in forwards;
+      transform: translateY(-130%);
+    }
+    .can3 {
+      animation: slidedown .25s 2s forwards;
+      transform: translateY(-130%);
+    }
+    .can2 {
+      animation: slideright .25s 2.25s forwards;
+      transform: translateX(-130%);
+    }
+    .can4 {
+      animation: slideleft .25s 2.5s forwards;
+      transform: translateX(130%);
+    }
+    .can1 {
+      animation: slideright .25s 2.75s forwards;
+      transform: translateX(-130%);
+    }
+    .can5 {
+      animation: slideleft .25s 3s forwards;
+      transform: translateX(130%);
+    }
+    .header {
+      animation: slidedown .5s 3.25s forwards;
+      transform: translateY(-130%);
+    }
+    .cta {
+      animation: ctaslide .5s 3.75s forwards;
+      transform: translateY(130%);
+    }
+  }
+}
+
+@keyframes slidedown {
+  from { transform: translateY(-130%); opacity: 0; }
+  to   { transform: translateY(0px); opacity: 1; }
+}
+
+@keyframes slideright {
+  from { transform: translateX(-130%); opacity: 0; }
+  to   { transform: translateY(0px); opacity: 1; }
+}
+
+@keyframes slideleft {
+  from { transform: translateX(130%); opacity: 0; }
+  to   { transform: translateY(0px); opacity: 1; }
+}
+@keyframes ctaslide {
+  from { transform: translateY(130%); opacity: 0; }
+  to   { transform: translateY(0px); opacity: 1; }
+}

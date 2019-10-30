@@ -1,0 +1,60 @@
+// .cart-button {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background: red url('../assets/icons/list-add.png') no-repeat center;
+//   background-size: 17px 15px;
+//   color: $white;
+//   width: 28px;
+//   height: 28px;
+//   margin-bottom: 10px;
+//   //----positioning the cart button on the right side
+//   position: absolute;
+//   right: 10px;
+
+
+//   &.added {
+//     background-image: url('../assets/icons/list-added.png');
+//     background-size: contain;
+//   }
+
+  
+
+//   /* TABLET */
+//   @media screen and (min-width: $tablet) {
+//     width: 24px;
+//     height: 24px;
+//   }
+// }
+
+.cart-button {
+  background: url('/assets/icons/list-add.png') no-repeat 50%;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  cursor: pointer;
+
+  &.added {
+    background-image: url('/assets/icons/list-added.png');
+  }
+}
+
+.product-box--vertical .cart-button {
+  position: absolute;
+  bottom: 0;
+  right: -38px;
+  margin: 0;
+
+  /* TABLET */
+  @media screen and (min-width: $tablet) {
+    right: -34px;
+  }
+}
+
+.product-box--must-buy .cart-button {
+  border: 1px solid $white;
+}

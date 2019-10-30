@@ -1,0 +1,99 @@
+.product-disclaimer {
+  font-size: 9px;
+  line-height: 9px;
+  margin-top: 5px;
+  flex: 1 1 100%;
+  font: 100 8px/8px "Univers LT Std", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-stretch: ultra-condensed;
+  max-height: 16px;
+  min-height: 8px;
+  overflow: hidden;
+  cursor: pointer;
+
+  div {
+    animation: marquee linear;
+  }
+
+  &.active {
+    overflow: visible;
+    div {
+      border: 1px solid #000;
+      position: absolute;
+      background: #fff;
+      max-height: none;
+      padding: 10px;
+      left: 0px;
+      right: 0px;
+      bottom: 0;
+      width: auto;
+      animation: none;
+    }
+  }
+  &.viewed div {
+    animation: none;
+  }
+
+  &.alcohol {
+    text-align: center;
+  }
+  span.date {
+    color: LightCoral;
+  }
+}
+
+.product-box--vertical .product-disclaimer {
+  margin-right: 10px;
+  &.active {
+    min-width: 260px;
+  }
+}
+
+@keyframes marquee {
+  0%   { transform: translateY(0) }
+  100% { transform: translateY(-100%) }
+}
+
+
+.footer {
+  color: #fff;
+  padding: 20px;
+  margin: 0 10px 0 3px;
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 9px;
+    line-height: 9px;
+    font-family: "Univers LT Std";
+    font-weight: 100;
+    margin: 25px 0 35px;
+  }
+
+  img {
+    height: 28px;
+  }
+
+  li {
+    display: inline;
+    margin-left: -7px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 20px 0;
+    p {
+      margin: 5px 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: relative;
+    ul {
+      position: absolute;
+      top: 14px;
+      right: 0;
+      white-space: nowrap;
+    }
+  }
+}

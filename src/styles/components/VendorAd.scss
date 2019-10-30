@@ -1,0 +1,438 @@
+.product-box--vendor-ad {
+  .tns-nav, .tns-nav + button {
+    display: none;
+  }
+
+  .tns-controls {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      width: 20px;
+      margin-left: auto;
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+
+  .slide {
+    opacity: 0;
+    height: 0;
+    padding-bottom: 10%;
+    &.tns-slide-active {
+      opacity: 1;
+    }
+  }
+
+  .tns-ovh {
+    overflow: visible;
+  }
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideup {
+  from { transform: translateY(90px); }
+  to   { transform: translateY(0px); }
+}
+
+.image-carousel {
+  margin-top: -6px;
+  .tns-controls, .tns-nav, button, .tns-liveregion {
+    display: none;
+  }
+  .slider {
+    display: flex;
+  }
+}
+
+.product-box--agropur {
+  background: url('../assets/images/vendor-ad/bg.svg') no-repeat center;
+  background-size: cover;
+  color: #fff;
+
+  .product-description__copy span {
+    display: block;
+  }
+
+  .product-box__content {
+    bottom: 0;
+  }
+  .product-box__header {
+    text-indent: -9999px;
+    background: url('../assets/images/vendor-ad/logo.svg') no-repeat center right;
+    height: 24px;
+    .dairy {
+      background: url('../assets/images/vendor-ad/dairy.png') no-repeat top left;
+      background-size: contain;
+      display: block;
+      height: 60px;
+    }
+    .logo {
+      display: none;
+    }
+  }
+
+  .product-box__image-wpr {
+    height: 145px;
+    img {
+      max-width: 70%;
+      margin-top: 10%;
+    }
+  }
+  .slide-1 {
+    .title img {
+      width: 100%;
+      opacity: 0;
+    }
+    .product-box__image-wpr img {
+      margin-top: 0;
+      transform: translateY(90px);
+      max-height: 120%;
+      height: 120%;
+    }
+    &.tns-slide-active {
+      .title img {
+        animation: fadein 1s .3s forwards;
+      }
+      .product-box__image-wpr img {
+        animation: slideup 1s .8s forwards;
+      }
+    }
+  }
+}
+
+.product-box.product-box--pets {
+  background: url('../assets/images/pets/bg.png') no-repeat center;
+  background-size: cover;
+
+  .tns-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .tns-controls button {
+    background: url('../assets/icons/back-black.svg') no-repeat center;
+    height: 20px;
+    img {
+      display: none;
+    }
+    & + button {
+      background-image: url('../assets/icons/next-black.svg')
+    }
+  }
+
+  .slide-1 {
+    background: url('../assets/images/pets/landing.png') no-repeat center;
+    background-size: cover;
+  }
+
+  .slide {
+    @media screen and (min-width: $tablet) {
+      height: 270px;
+      padding: 0;
+    }
+    @media screen and (max-width: $tablet) {
+      padding-bottom: 12.5%;
+    }
+  }
+
+  .product-box__content {
+    margin-left: 10px;
+  }
+
+  .product-description__copy span {
+    display: block;
+  }
+
+  .product-box__image-wpr {
+    max-height: 190px;
+    margin-right: 10%;
+    justify-content: flex-end;
+    img {
+      margin-top: 15%;
+    }
+  }
+
+  &.pets {
+    @media screen and (max-width: $tablet) {
+      .slide {
+        position: relative;
+        padding-bottom: 5.75%;
+      }
+      .product-box__image-wpr {
+        height: auto;
+      }
+    }
+  }
+}
+
+
+.product-box--tp {
+  display: none;
+  background-size: cover;
+  background-position: center;
+
+  .product-box__image-wpr {
+    height: 176px;
+    justify-content: flex-end;
+    img {
+      margin-top: 20%;
+    }
+  }
+
+  &.bounty {
+    background-image: url('../assets/images/TP/bg-bounty.png');
+    .product-box__image-wpr {
+      height: 130px;
+      img {
+        margin-top: 40%;
+      }
+    }
+  }
+  &.charmin {
+    background-image: url('../assets/images/TP/bg-charmin.png');
+  }
+  &.puffs {
+    background-image: url('../assets/images/TP/bg-puffs.png');
+  }
+}
+
+.bounty .product-box--tp.bounty,
+.charmin .product-box--tp.charmin,
+.puffs .product-box--tp.puffs {
+  display: flex;
+}
+
+
+.product-box.product-box--clean {
+  background: url('../assets/images/clean/bg.png') no-repeat center;
+  background-size: cover;
+
+  .slide-1 {
+    background: url('../assets/images/clean/landing.png') no-repeat center;
+    background-size: cover;
+  }
+
+  .slide {
+    position: relative;
+  }
+
+  .product-box__image-wpr {
+    justify-content: center;
+    img {
+      margin-top: 10%;
+    }
+  }
+}
+
+.product-box.product-box--local-growers {
+  background: #fff;
+  .slide {
+    position: relative;
+
+    @media screen and (max-width: $tablet) {
+      padding-bottom: 17.5%;
+    }
+  }
+  .slide-1 {
+    background: url('../assets/images/localgrowers/landing.png') no-repeat center;
+    background-size: cover;
+  }
+  .slide-2 {
+    background: url('../assets/images/localgrowers/message.png') no-repeat center;
+    background-size: cover;
+  }
+  .slide-3 {
+    background: #4b9c44;
+  }
+  .product-box__image-wpr {
+    justify-content: center;
+  }
+}
+
+.product-box.product-box--pccc {
+  background: #fff;
+  .slide {
+    position: relative;
+
+    @media screen and (max-width: $tablet) {
+      padding-bottom: 17.5%;
+    }
+  }
+  .slide-1 {
+    background: url('../assets/images/pccc/logo.png') no-repeat center;
+    background-size: 60% auto;
+  }
+  .slide-2 {
+    background: url('../assets/images/pccc/message.png') no-repeat center;
+    background-size: cover;
+  }
+
+  .product-box__image-wpr {
+    justify-content: center;
+  }
+}
+
+.product-box.product-box--farm {
+  background: #fff;
+
+  .slide {
+    position: relative;
+
+    @media screen and (max-width: $tablet) {
+      padding-bottom: 14.5%;
+    }
+  }
+
+  .product-box__image-wpr {
+    justify-content: center;
+  }
+
+  .slide-1 {
+    background: url('../assets/images/localfarm/landing.jpg') no-repeat center;
+    background-size: cover;
+  }
+  .title {
+    color: #fff;
+    font: 700 42px 'Sharp Grotesk';
+    text-align: center;
+    margin-top: 18%;
+  }
+  .slide-2 {
+    background: #BE312C;
+    color: #fff;
+    text-align: center;
+
+    h2 {
+      font: 700 20px 'Sharp Grotesk';
+      margin: 1.5em auto .5em;
+      span {
+        display: block;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-size: 16px;
+      }
+    }
+    p {
+      font-family: 'Lato', sans-serif;
+      font-weight: 100;
+      font-size: 12px;
+      line-height: 18px;
+      margin: 0 10%;
+    }
+  }
+
+  &.farm2 {
+    .slide {
+      @media screen and (max-width: $tablet) {
+        padding-bottom: 11.1%;
+      }
+    }
+    .slide-1 {
+      background: url('../assets/images/localfarm/landing2.jpg') no-repeat center;
+      background-size: cover;
+    }
+    .slide-2 {
+      background: #9EB13A;
+    }
+    .slide-3 {
+      background: url('../assets/images/localfarm/cucumber.jpg') no-repeat center;
+      background-size: cover;
+      color: #fff;
+    }
+    .slide-4 {
+      background: url('../assets/images/localfarm/tomatos.jpg') no-repeat center;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .yellow {
+      background: Goldenrod;
+      color: #fff;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 60%;
+      z-index: -1;
+      h3 {
+       font: 700 16px 'Sharp Grotesk';
+       margin-top: 1em;
+      }
+      p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 100;
+      }
+    }
+
+    ul {
+      position: absolute;
+      top: 25%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 178px;
+      li {
+        float: left;
+        font-family: 'Lato', sans-serif;
+        font-weight: 100;
+        font-size: 11px;
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+      img {
+        width: 15px;
+        margin-right: 5px;
+      }
+    }
+
+    .slide-5 .product-box__image-wpr img {
+      max-height: 120%;
+      margin-top: 28%;
+    }
+  }
+}
+
+.product-box--grilling-tip {
+  background: url('../assets/images/localfarm/grilling.jpg') no-repeat center;
+  background-size: cover;
+
+  div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    background: LightSeaGreen;
+    color: #fff;
+  }
+
+  h3 {
+    font: 700 16px 'Sharp Grotesk';
+  }
+
+  p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+    line-height: 19px;
+    margin-top: 5px;
+  }
+}

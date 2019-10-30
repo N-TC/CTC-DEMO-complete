@@ -1,0 +1,114 @@
+.interactive-badge__wpr {
+  .interactive-badge {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: $white;
+    transition: background-color 350ms ease;
+    font-stretch: ultra-condensed;
+    text-transform: uppercase;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-around;
+    text-align: center;
+    padding: 5px;
+    width: 70px;
+    height: 75px;
+
+    &--video {
+      left: 0;
+      animation: slideInLeft ease 2s;
+
+      svg {
+        width: 40px;
+      }
+    }
+
+    &--coupon {
+      right: 0;
+      animation: slideInRight ease 2s;
+
+      svg {
+        width: 35px;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .modal-wpr {
+    background: $translucent-gray;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 40;
+    width: 100vw;
+    cursor: default;
+
+    .modal {
+      position: relative;
+      margin: 100px 15px;
+      max-width: 600px;
+      height: auto;
+
+      video {
+        width: 100%;
+        margin: 0;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .modal-close {
+        transform: rotate(45deg);
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        padding: 4px;
+        top: -10px;
+        right: -10px;
+        background-color: $bg-orange;
+        border-radius: 50%;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* TABLET */
+      @media screen and (min-width: $tablet) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@keyframes slideInLeft{
+  0% {
+    left: -70px;
+  }
+  75% {
+    left: -70px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slideInRight{
+  0% {
+    right: -70px;
+  }
+  75% {
+    right: -70px;
+  }
+  100% {
+    right: 0;
+  }
+}

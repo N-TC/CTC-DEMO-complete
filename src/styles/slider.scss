@@ -1,0 +1,73 @@
+main .grid .col.col--slider {
+  width: 415px;
+  position: relative;
+
+  &:not(.double) {
+    margin-left: -2px;
+  }
+
+  .tns-controls {
+    display: none;
+  }
+  .tns-nav {
+    display: none;
+  }
+  [data-action=stop],[data-action=start] {
+    display: none;
+  }
+
+  /* TABLET */
+  @media screen and (min-width: $tablet) {
+    width: 302px;
+
+    &.double {
+      max-width: none;
+      width: 615px;
+      flex: 100%;
+      padding: 0;
+
+      .tns-controls {
+        width: 40px;
+        margin-right: 0;
+      }
+      .tns-inner {
+        width: 615px;
+        overflow: hidden;
+      }
+    }
+
+    .tns-controls {
+      position: absolute;
+      top: 0;
+      right: 5px;
+      bottom: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 40px;
+      margin: auto;
+
+      button {
+        width: 40px;
+        padding: 10px;
+        margin-left: auto;
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &.double {
+      flex: 49%;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+    #tns1-iw {
+    margin-left: 2px !important;
+  }
+}

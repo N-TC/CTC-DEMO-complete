@@ -1,0 +1,259 @@
+<!-- 144-400 -->
+
+
+<div class="all-offers__section fade-in grid hidden">
+
+        <div class="col all-offers">
+          <include src="components/ProductBoxViewAll.html" />
+        </div>
+
+        <div class="col" data-category="">
+          <div class="product-box product-box--food-lovers-unite">
+            <div class="food">Food</div>
+            <div class="lovers">lovers</div>
+            <div class="unite">unite</div>
+          </div>
+        </div>
+
+        <div class="col" data-category="produce,butcher">
+          <include src="components/ProductBoxVideo.html" />
+        </div>
+        <each loop="product, index in products">
+          <div class="col" data-page="{{{ product.page }}}" 
+              data-category="{{{ product.categories }}}" 
+              data-category2="{{{ product.categories2 }}}" 
+              data-keywords="{{{ product.keywords }}}">
+            <div class="product-box {{{ product.vertical }}}" id="{{{product.articleCode}}}">
+
+              <switch expression="product.badge">
+                <case n="'points'">
+                  <include src="components/PointsBadge.html" />
+                </case>
+                <case n="'logo'">
+                  <include src="components/LogoBadge.html" />
+                </case>
+                <default>
+                </default>
+              </switch>
+
+              <if condition="product.videoBadge">
+                <include src="components/InteractiveBadgeVideo.html" />
+              </if>
+              <if condition="product.couponBadge">
+                <include src="components/InteractiveBadgeCoupon.html" />
+              </if>
+               -->
+              <div class="product-box__image-wpr">
+                <img class="product-box__image lazy" data-src="{{{product.imagePath}}}" alt="">
+              </div>
+
+               <div class="product-box__content">
+                <div class="price-box">
+                  <div class="price-box__inner">
+                    <div>
+                      <include src="components/CartButton.html">
+                    </div>
+                    <switch expression="product.priceVariation">
+                      <case n="'local'">
+                        <div class="price-box__variation local">
+                          <div class="price-box__variation-text">
+                            Ontario
+                          </div>
+                        </div>
+                      </case>
+                      <case n="'baked'">
+                        <div class="price-box__variation baked">
+                          <div class="price-box__variation-text">
+                            Baked In-Store
+                          </div>
+                        </div>
+                      </case>
+                      <case n="'sale'">
+                        <div class="price-box__variation sale">
+                          <div class="price-box__variation-text">
+                            Sale
+                          </div>
+                          <div class="price-box__variation-subtext">
+                            {{{product.variationText}}}
+                          </div>
+                        </div>
+                      </case>
+                      <case n="'multi'">
+                        <div class="price-box__variation multi">
+                          <div class="price-box__variation-text">
+                            Multi
+                          </div>
+                          <div class="price-box__variation-subtext">
+                            {{{product.variationText}}}
+                          </div>
+                        </div>
+                      </case>
+                      <case n="'mix'">
+                        <div class="price-box__variation mix">
+                          <div class="price-box__variation-text">
+                            Mix & Match
+                          </div>
+                          <div class="price-box__variation-subtext">
+                            {{{product.variationText}}}
+                          </div>
+                        </div>
+                      </case>
+                      <case n="'canada'">
+                        <div class="price-box__variation canada">
+                          <div class="price-box__variation-text">
+                            Canada
+                          </div>
+                        </div>
+                      </case>
+                      <case n="'generic'">
+                        <div class="price-box__variation generic">
+                          <div class="price-box__variation-text">
+                            {{{product.variationText}}}
+                          </div>
+                        </div>
+                      </case>
+                      <default>
+                      </default>
+                    </switch>
+                    <div class="price-box__price">
+                      <span>{{{product.priceNormal}}}</span>
+                      <span class="super">{{{ product.priceSuper }}}<span class="super-super">{{{ product.priceSuperSuper }}}</span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-description">
+                  <div class="product-description__copy" data-description="{{{product.description}}}">
+                    {{{product.description}}}
+                  </div>
+                  <div class="product-description__code">
+                    {{{product.articleCode}}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </each>
+
+        <div class="col" data-category="produce,bakery,fish">
+          <include src="components/ProductBoxVendorAd.html" />
+        </div>
+        <div class="col" data-category="produce,bakery,fish">
+          <include src="components/ProductBoxZevia.html" />
+        </div>
+        <div class="col" data-category="produce,bakery,fish">
+          <include src="components/ProductBoxPets.html" />
+        </div>
+        <div class="col bounty" data-category="produce,bakery,fish">
+          <include src="components/ProductBoxTP.html" />
+        </div>
+        <div class="col charmin" data-category="produce,bakery,fish">
+          <include src="components/ProductBoxTP.html" />
+        </div>
+        <div class="col puffs" data-category="produce,bakery,fish">
+          <include src="components/ProductBoxTP.html" />
+        </div>
+        <div class="col puffs" data-category="produce,bakery,fish">
+          <include src="components/ProductBoxClean.html" />
+        </div>
+        <div class="col" data-category="produce,bakery,fish">
+          <include src="components/ProductBoxLocalGrowers.html" />
+        </div>
+        <div class="col" data-category="produce,bakery,fish">
+          <include src="components/ProductBoxPCCC.html" />
+        </div>
+        <div class="col" data-category="produce,bakery,fish">
+          <div class="product-box">
+            <div class="vendor-badge">
+              <img class="lazy" data-src="assets/icons/logos/healthy.png" alt="">
+            </div>
+            <div class="product-box__image-wpr">
+              <img class="product-box__image lazy" src="/assets/images/5.png" alt="">
+            </div>
+            <div class="product-box__content">
+              <div class="price-box">
+                <div class="price-box__inner">
+                  <div class="price-box__price">
+                    <span>3</span>
+                    <span class="super">99<span class="super-super">lb</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-description">
+                <div class="product-description__copy" data-description="vendor ad">
+                  Healthy Choice all-day power bowls 204 g 206 g selected varieties
+                </div>
+                <div class="product-description__code">
+                  20326678
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-category="bakery,fish">
+          <include src="components/ProductBoxSpendGet.html" />
+        </div>
+        <div class="col" data-category="deli,go">
+          <include src="components/ProductBoxSaleLovers.html" />
+        </div>
+        <div class="col" data-category="wellness,household">
+          <include src="components/ProductBoxDollarDeals.html" />
+        </div>
+        <div class="col" data-category="essentials,home">
+          <include src="components/ProductBoxSpendGetHorizontal.html" />
+        </div>
+        <div class="col" data-category="fish,home">
+          <include src="components/ProductBoxMembersOnly.html" />
+        </div>
+        <div class="col" data-category="deli,butcher">
+          <include src="components/ProductBoxCorporateMessage.html" />
+        </div>
+        <div class="col" data-category="essentials,butcher">
+          <include src="components/ProductBoxDepartmentOffer.html" />
+        </div>
+        <div class="col" data-category="go,bakery">
+          <include src="components/ProductBoxSwipeWin.html" />
+        </div>
+        <div class="col" data-category="fish,butcher">
+          <include src="components/ProductBoxBuyXGet.html" />
+        </div>
+        <div class="col" data-category="fish,butcher">
+          <include src="components/ProductBoxBuy1Get1.html" />
+        </div>
+        <div class="col" data-category="home,household">
+          <include src="components/ProductBoxExclusiveOffer.html" />
+        </div>
+        <div class="col" data-category="bakery,wellness">
+          <include src="components/ProductBoxPCExpress.html" />
+        </div>
+
+        <div class="col" data-category="produce" data-category2="fruits">
+          <include src="components/ProductBoxYourLocalFarm.html" />
+        </div>
+
+        <div class="col" data-category="produce" data-category2="vegetables">
+            <include src="components/ProductBoxYourLocalFarm2.html" />
+          </div>
+
+
+        <div class="col" data-category="produce" data-category2="fruits">
+          <div class="product-box product-box--grilling-tip">
+            <div>
+              <h3>Grilling tip:</h3>
+              <p>Cut peaches or nectarines in half and remove the pit. Grill halves, or cut into wedges, until there are good grill marks on each side. After grilling, sweeten with some brown sugar.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col next-department-col">
+          <div class="next-department product-box">
+            <div class="background"></div>
+            <div class="background__filter">
+              <button>
+                <div class="product-box__title">
+                  Next
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>

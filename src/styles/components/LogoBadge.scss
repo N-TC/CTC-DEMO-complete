@@ -1,0 +1,56 @@
+.logo-badge, .vendor-badge {
+  z-index: 20;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  img {
+  //  width: 65px;
+    max-height: 65px;
+  }
+
+  
+}
+
+.vendor-badge {
+  right: 10px;
+  left: auto;
+  img {
+    height: 42px;
+    width: auto;
+  }
+}
+
+
+.logo-badge-2 {
+  z-index: 20;
+  position: absolute;
+  top: 36px;
+  left: 6px;
+  img {
+  //  width: 65px;
+    max-height: 65px;
+  }
+}
+
+
+.we-install-icon {
+  z-index: 20;
+  position: absolute;
+  bottom: 90px;
+  left: 10px;
+  img {
+  //  width: 65px;
+    max-height: 65px;
+  }
+}
+
+.we-do-new-icon {
+  z-index: 20;
+  position: absolute;
+  bottom: 80px;
+  right: 10px;
+  img {
+  //  width: 65px;
+    max-height: 55px;
+  }
+}

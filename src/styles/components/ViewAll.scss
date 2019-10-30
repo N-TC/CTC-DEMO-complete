@@ -1,0 +1,54 @@
+.product-box--view-all {
+  position: relative;
+  background: $dark-orange;
+  height: 83vw;
+  padding: 10px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font: 700 42px 'Sharp Grotesk';
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet) {
+    width: 282px;
+    height: 250px;
+  }
+  .background__filter {
+    background: none;
+  }
+
+  .offers {
+    color: $red;
+  }
+
+  &.animating {
+    .view {
+      animation: view .25s 1s forwards;
+      transform: translateX(-230%);
+    }
+    .all {
+      animation: all .25s 1.25s forwards;
+      transform: translateX(290%);
+    }
+    .offers {
+      animation: offers .25s 1.5s forwards;
+      transform: translateY(350%);
+    }
+  }
+}
+
+@keyframes view {
+  from { transform: translateX(-230%); opacity: 0; }
+  to   { transform: translateX(0px); opacity: 1; }
+}
+@keyframes all {
+  from { transform: translateX(290%); opacity: 0; }
+  to   { transform: translateX(0px); opacity: 1; }
+}
+@keyframes offers {
+  from { transform: translateY(350%); opacity: 0; }
+  to   { transform: translateY(0px); opacity: 1; }
+}

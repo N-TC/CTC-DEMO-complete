@@ -1,0 +1,30 @@
+{
+  "name": "lcl",
+  "version": "1.0.0",
+  "description": "LCL Digital Flyer for TransCon",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx parcel src/index.html",
+    "build": "NODE_ENV=development npx parcel build src/index.html --public-url '.'",
+    "generate": "rm -r dist .cache && npx parcel build src/index.html --public-url '.' && node postProcessing.js && npx prettier dist/index.html --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-lazy": "0.0.4",
+    "posthtml-expressions": "^1.1.1",
+    "posthtml-include": "^1.2.0",
+    "prettier": "^1.18.2",
+    "sass": "^1.22.3"
+  },
+  "dependencies": {
+    "assets": "^3.0.1",
+    "normalize.css": "^8.0.1"
+  }
+}

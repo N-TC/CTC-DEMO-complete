@@ -1,0 +1,100 @@
+.price-box__variation {
+  padding-top: 2px;
+
+  text-transform: uppercase;
+  // text-align: center;
+
+  &.sale {
+    min-height: 40px;
+    background-color: $red;
+    .price-box__variation-text {
+      color: $yellow;
+      font-size: 24px;
+    }
+    .price-box__variation-subtext {
+      color: $white;
+      font-size: 14.5px;
+    }
+  }
+
+  &.generic {
+    padding-top: 6px;
+    height: 20px;
+    background-color: $dark-gray;
+    text-transform: none;
+    .price-box__variation-text {
+      color: $white;
+      font-size: 15px;
+    }
+  }
+
+  &.local {
+    padding-top: 5px;
+    height: 23px;
+    background-color: $blue;
+    .price-box__variation-text {
+      color: $white;
+      font-size: 20px;
+    }
+  }
+
+  &.canada {
+    padding-top: 4px;
+    height: 22px;
+    background-color: $canada-red;
+    .price-box__variation-text {
+      color: $white;
+      font-size: 20px;
+    }
+  }
+
+  &.ctcSale {
+    padding-top: 4px;
+    height: 22px;
+    .price-box__variation-text {
+      color: #FF2D16;
+      font-size: 30px;
+    }
+  }
+
+
+  &.multi {
+    padding-top: 5px;
+    min-height: 51px;
+    background-color: $orange;
+    .price-box__variation-text {
+      color: $dark-red;
+      font-size: 30px;
+    }
+    .price-box__variation-subtext {
+      color: $black;
+      font-size: 13px;
+      font-style: italic;
+      text-transform: none;
+    }
+  }
+
+  &.baked {
+    padding-top: 6px;
+    height: 20px;
+    background-color: #FFB300;
+    color: #fff;
+    font-size: 15px;
+  }
+
+  &.mix {
+    padding: 3px 0;
+    background-color: $red;
+    color: #fff;
+    .price-box__variation-text {
+      font-size: 18px;
+      max-width: 80px;
+      margin: 0 auto;
+    }
+    .price-box__variation-subtext {
+      font-size: 13px;
+      font-style: italic;
+      text-transform: none;
+    }
+  }
+}
